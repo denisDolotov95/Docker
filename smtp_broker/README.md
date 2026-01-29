@@ -1,6 +1,8 @@
 # smtp_broker
 
-Broker SMTP
+Broker SMTP (for RabbitMQ)
+
+![Model](model.png)
 
 This is an example of broker smtp requests for deployment using a docker container.
 
