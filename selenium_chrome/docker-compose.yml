@@ -1,0 +1,22 @@
+services:
+  chrome:
+    image: seleniarm/standalone-chromium:latest
+    hostname: chrome
+    networks:
+      production:
+        ipv4_address: 172.18.0.200
+    privileged: true
+    shm_size: 2g
+    ports:
+      - "4444:4444"  # Selenium WebDriver API
+      - "7900:7900"  # VNC Viewer
+    environment:
+      - SE_NODE_MAX_SESSIONS=3
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_NODE_SESSION_TIMEOUT=300
+      - SE_NODE_GRID_URL=http://localhost:4444
+      - SE_NODE_DETECT_DRIVERS=false
+
+networks:
+  production:
+    external: true
