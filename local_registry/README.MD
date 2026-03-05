@@ -1,4 +1,5 @@
 [Docker Hub](https://hub.docker.com/_/registry)
+
 This image contains an implementation of the OCI Distribution spec. See github.com/opencontainers/distribution-spec for more details about what it is. You can find the full source code in github.com/distribution/distribution.
 
 Run a local registry: Quick Version
